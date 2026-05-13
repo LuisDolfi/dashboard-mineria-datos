@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dashboard Minería de Datos</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Apache ECharts -->
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Dashboard Logístico</h1>
+    <p>Visualización de datos para Minería de Datos</p>
+  </header>
+
+  <section class="filters">
+    <div>
+      <label for="monthFilter">Mes</label>
+      <select id="monthFilter">
+        <option value="todos">Todos</option>
+        <option value="enero">Enero</option>
+        <option value="febrero">Febrero</option>
+        <option value="marzo">Marzo</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="regionFilter">Región</label>
+      <select id="regionFilter">
+        <option value="todas">Todas</option>
+        <option value="posadas">Posadas</option>
+        <option value="garupa">Garupá</option>
+        <option value="interior">Interior</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="statusFilter">Estado</label>
+      <select id="statusFilter">
+        <option value="todos">Todos</option>
+        <option value="entregado">Entregado</option>
+        <option value="pendiente">Pendiente</option>
+        <option value="demorado">Demorado</option>
+      </select>
+    </div>
+  </section>
+
+  <main class="dashboard">
+
+    <section class="kpis">
+      <article class="card">
+        <span>Total órdenes</span>
+        <strong id="totalOrders">0</strong>
+      </article>
+
+      <article class="card">
+        <span>Entregadas</span>
+        <strong id="deliveredOrders">0</strong>
+      </article>
+
+      <article class="card">
+        <span>Pendientes</span>
+        <strong id="pendingOrders">0</strong>
+      </article>
+
+      <article class="card">
+        <span>Cumplimiento</span>
+        <strong id="complianceRate">0%</strong>
+      </article>
+    </section>
+
+    <section class="charts-grid">
+      <div class="chart-card">
+        <h2>Cumplimiento general</h2>
+        <div id="gaugeCompliance" class="chart"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>Eficiencia operativa</h2>
+        <div id="gaugeEfficiency" class="chart"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>Órdenes por región</h2>
+        <div id="barRegions" class="chart"></div>
+      </div>
+
+      <div class="chart-card">
+        <h2>Mapa de calor operativo</h2>
+        <div id="heatMap" class="chart"></div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Detalle de envíos</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Mes</th>
+            <th>Región</th>
+            <th>Estado</th>
+            <th>Tiempo estimado</th>
+          </tr>
+        </thead>
+        <tbody id="dataTable"></tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
