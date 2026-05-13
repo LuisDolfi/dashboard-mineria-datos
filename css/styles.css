@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f6;
+  color: #1f2937;
+}
+
+.header {
+  background: #ffffff;
+  padding: 20px 32px;
+  border-bottom: 1px solid #d9e2ec;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  color: #1e3a5f;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  padding: 20px 32px;
+  background: #f8fafc;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+.filters div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filters label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #334155;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  min-width: 150px;
+}
+
+.dashboard {
+  padding: 24px 32px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.card span {
+  display: block;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.card strong {
+  font-size: 32px;
+  color: #0f766e;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.chart-card h2 {
+  font-size: 17px;
+  margin: 0 0 12px;
+  color: #334155;
+}
+
+.chart {
+  height: 280px;
+}
+
+.table-section {
+  margin-top: 24px;
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.table-section h2 {
+  margin-top: 0;
+  color: #334155;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+@media (max-width: 900px) {
+  .kpis,
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}
