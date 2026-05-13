@@ -81,4 +81,5 @@ Los datos utilizados son simulados y fueron cargados directamente en JavaScript 
 **Luis Dolfi**
 
 Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial
+
 Materia: Minería de Datos
