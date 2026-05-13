@@ -45,7 +45,7 @@ Se eligió esta librería porque permite crear distintos tipos de gráficos inte
   - Estado
 
 ## Estructura del proyecto
-
+```
 dashboard-mineria-datos/
 ├── index.html
 ├── css/
@@ -53,7 +53,7 @@ dashboard-mineria-datos/
 ├── js/
 │   └── app.js
 └── README.md
-
+```
 ## Ramas utilizadas
 
 main
