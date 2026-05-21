@@ -76,6 +76,16 @@ Una vez abierto, el proyecto se ejecuta en una dirección local similar a:
 
 Los datos utilizados son simulados y fueron cargados directamente en JavaScript para representar envíos logísticos con diferentes meses, regiones y estados.
 
+## Consumo de API externa
+
+El dashboard consume datos desde la API pública JSONPlaceholder mediante `fetch`.
+
+Endpoint utilizado:
+
+https://jsonplaceholder.typicode.com/todos
+
+Los datos obtenidos se transforman con JavaScript para adaptarlos al contexto logístico del dashboard, generando registros de envíos con mes, región, estado y tiempo estimado.
+
 ## Autor
 
 **Luis Dolfi**
